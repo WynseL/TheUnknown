@@ -22,9 +22,6 @@ func _ready():
 	# animation node for animations
 	PlayerAnimNode = get_node("AnimatedSprite")
 	
-	# prepare PlayerMovement class
-#	movement = Movement.new();
-	
 	pass
 
 func _physics_process(delta):

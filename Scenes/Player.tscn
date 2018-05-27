@@ -64,7 +64,7 @@ animations = [ {
 "speed": 3.0
 } ]
 
-[node name="Player" type="KinematicBody2D"]
+[node name="Player" type="KinematicBody2D" index="0"]
 
 input_pickable = false
 collision_layer = 1
@@ -104,6 +104,7 @@ texture = ExtResource( 2 )
 
 [node name="Collision" type="CollisionShape2D" parent="." index="2"]
 
+position = Vector2( 0, 16 )
 shape = SubResource( 1 )
 _sections_unfolded = [ "Transform" ]
 
