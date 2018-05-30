@@ -19,10 +19,12 @@ func _physics_process(delta):
 	
 	if body.size() != 0:
 		for side in body:
-			print(side.get_groups())
-			if side.is_in_group("Player"):
+#			if side.is_in_group("Player"):
+			if side.get_name() == "Player":
+				print(side.get_name() + " x : " + str(side.get_global_transform().x) + " : " + str(self.get_global_transform().x))
+				print(side.get_name() + " y : " + str(side.get_global_transform().y) + " : " + str(self.get_global_transform().y))
 				if side.get_global_transform().x < self.get_global_transform().x:
-					move.x -= 1
+					move.x -= 10
 					
 	move = move.normalized() * MOTION_SPEED * delta
 	move_and_slide(move)
